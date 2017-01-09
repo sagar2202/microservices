@@ -1,0 +1,10 @@
+server:
+  port: 7001
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:  #Disable registering with itself
+    registerWithEureka: false
+    fetchRegistry: false
+
