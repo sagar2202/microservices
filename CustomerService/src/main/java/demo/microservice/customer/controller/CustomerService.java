@@ -11,6 +11,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
+import demo.microservice.customer.exception.CustomerNotFoundException;
 import demo.microservice.customer.domain.Customer;
 import demo.microservice.customer.repo.CustomerRepo;
 
@@ -26,10 +27,12 @@ public class CustomerService {
     public Customer getCustomer(@PathVariable int customerid) throws JsonProcessingException {
 		ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 		Customer cust = custRepo.findByCustomerid(customerid);	
-		if(cust!=null){
+		if(cust==null){
+			throw new CustomerNotFoundException(customerid);			
+		}else{
 			log.info("Customer:" +  ow.writeValueAsString(cust)) ;
-		}
 		return cust;
+		}
        
 	}
 }
