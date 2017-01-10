@@ -1,0 +1,18 @@
+CREATE TABLE demo.account
+(
+  customerid int PRIMARY KEY NOT NULL,  
+  datalimit float NOT NULL,
+  availabledata float NOT NULL,
+  balance float NOT NULL,
+  duedate DATETIME
+);
+
+COMMIT;
+
+INSERT INTO account VALUES (9368,5.0,2.5,100.00,'2017-01-31 00:00:00');
+INSERT INTO account VALUES (6395,5.0,3.0,0.00,'2017-02-05 00:00:00');
+INSERT INTO account VALUES (5553,2.0,2.0,19.99,'2017-01-08 00:00:00');
+INSERT INTO account VALUES (9513,2.0,1.5,25.00,'2017-01-25 00:00:00');
+INSERT INTO account VALUES (7043,5.0,1.0,0.00,'2017-01-18 00:00:00');
+INSERT INTO account VALUES (7274,3.0,2.0,149.49,'2017-01-31 00:00:00');
+COMMIT;

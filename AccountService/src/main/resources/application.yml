@@ -1,0 +1,18 @@
+spring:
+  application:
+     name: account-service 
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+        
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+      
+server:
+  port: 7003
