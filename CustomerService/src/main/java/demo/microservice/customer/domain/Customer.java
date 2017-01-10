@@ -1,10 +1,4 @@
 package demo.microservice.customer.domain;
-/**
- * @author Sagar Jain
- *
- */
-import java.sql.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -17,7 +11,6 @@ public class Customer {
 	private String firstname;
 	private String lastname;
 	private String address;
-	private Date duedate;
 	
 	public int getCustomerId() {
 		return customerid;
@@ -43,23 +36,18 @@ public class Customer {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Date getduedate() {
-		return duedate;
-	}
-	public void setduedate(Date duedate) {
-		this.duedate = duedate;
-	}
+	
 	
 	public Customer(){
 		
 	}
 	
-	public Customer(int custoemerid, String fName, String lName, String address, Date date) {
+	public Customer(int custoemerid, String fName, String lName, String address) {
 		this.customerid=custoemerid;
         this.firstname=fName;
         this.lastname=lName;
         this.address=address;
-        this.duedate=date;
+       
     }
 
 
