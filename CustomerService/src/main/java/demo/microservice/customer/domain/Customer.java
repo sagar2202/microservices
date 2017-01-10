@@ -2,7 +2,10 @@ package demo.microservice.customer.domain;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+ * @author Sagar Jain
+ *
+ */
 @Entity
 @Table(name= "customer")
 public class Customer {
