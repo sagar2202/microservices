@@ -45,11 +45,11 @@ public class Customer {
 		
 	}
 	
-	public Customer(int custoemerid, String fName, String lName, String address) {
-		this.customerid=custoemerid;
-        this.firstname=fName;
-        this.lastname=lName;
-        this.address=address;
+	public Customer(int customerid, String fName, String lName, String address) {
+		this.customerid=customerid;
+        	this.firstname=fName;
+        	this.lastname=lName;
+        	this.address=address;
        
     }
 
