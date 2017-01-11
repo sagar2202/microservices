@@ -36,6 +36,7 @@ public class AccountService {
 		ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 		Account acc = accRepo.findByCustomerid(customerid);	
 		if(acc==null){
+			log.error("Account Not Found for: " +  customerid);
 			throw new AccountDetailsNotFoundException(customerid);			
 		}else{
 			log.info("Account Details:" +  ow.writeValueAsString(acc)) ;
