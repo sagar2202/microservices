@@ -43,6 +43,7 @@ public class PaymentService {
 			log.info("Payment Details:" + ow.writeValueAsString(payment));
 			return payment;
 		} catch (Exception e) {
+			log.error("Payment Failed for :" + customerid);
 			throw new PaymentFailureException(customerid);
 		}
 
@@ -56,6 +57,7 @@ public class PaymentService {
 
 		Payment payment = paymentRepo.findOne(paymentid);
 		if (payment == null) {
+			log.error("Payment not found for :" + paymentid);
 			throw new PaymentNotFoundException(paymentid);
 		} else {
 			log.info("Payment Details:" + ow.writeValueAsString(payment));
