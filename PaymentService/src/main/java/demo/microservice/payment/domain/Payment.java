@@ -19,7 +19,7 @@ public class Payment {
 	private int customerid;	
 	private String status;
 	private double amount;
-	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss")
+	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", timezone="PST")
 	private Date paymentdate;
 	
 	public int getCustomerid() {

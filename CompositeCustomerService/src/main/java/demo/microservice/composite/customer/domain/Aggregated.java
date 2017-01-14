@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import demo.microservice.account.domain.Account;
 import demo.microservice.customer.domain.Customer;
@@ -18,6 +19,9 @@ import demo.microservice.payment.domain.Payment;
  * @author Sagar Jain
  *
  */
+
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
+
 public class Aggregated {
 	private int customerServiceStatus;
 	private int customerid;
@@ -28,13 +32,13 @@ public class Aggregated {
 	private double datalimit;
 	private double availabledata;
 	private double balance;
-	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss")
+	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", timezone="PST")
 	private Date duedate;
 	private int paymentServiceStatus;
 	private int paymentid;
 	private String status;
 	private double amount;
-	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss")
+	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", timezone="PST")
 	private Date paymentdate;
 
 	

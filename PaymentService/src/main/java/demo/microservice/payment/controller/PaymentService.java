@@ -28,7 +28,8 @@ import demo.microservice.payment.repo.PaymentRepo;
 public class PaymentService {
 	private static final Logger log = LogManager.getLogger(PaymentService.class);
 	ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-
+	Random rng = new Random();
+	
 	@Autowired
 	private PaymentRepo paymentRepo;
 
@@ -79,10 +80,9 @@ public class PaymentService {
 		 * 
 		 */
 
-		int paymentid = new Random().nextInt(Integer.SIZE - 1);
-		
-		if(paymentid/2==0)
-	      return new Payment(customerid, paymentid, "SUCCESS", amount, new Date(System.currentTimeMillis()));
+		int paymentid =  Math.abs((int) (rng.nextInt() % 100000000000000L)) ;
+		if(paymentid % 2 == 0)
+	      return new Payment(customerid, paymentid, "SUCCESS", amount, new Date());
 		else 
 		  throw  new Exception();
 	}
