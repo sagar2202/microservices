@@ -1,9 +1,11 @@
 package demo.microservice.account.domain;
 
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
  * @author Sagar Jain
@@ -17,6 +19,7 @@ public class Account {
 	private double datalimit;
 	private double availabledata;
 	private double balance;
+	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss")
 	private Date duedate;
 	public int getCustomerid() {
 		return customerid;

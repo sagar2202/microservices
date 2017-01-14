@@ -1,7 +1,4 @@
 package demo.microservice.account.controller;
-import java.util.Date;
-
-import org.apache.commons.lang.time.DateUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +29,7 @@ public class AccountService {
 	@RequestMapping("/account/{customerid}")
 	@ResponseBody
     public Account getCustomer(@PathVariable int customerid) throws JsonProcessingException {
+		//DateFormat df = new 
 		
 		ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 		Account acc = accRepo.findByCustomerid(customerid);	
@@ -39,11 +37,8 @@ public class AccountService {
 			log.error("Account Not Found for: " +  customerid);
 			throw new AccountDetailsNotFoundException(customerid);			
 		}else{
-			log.info("Account Details:" +  ow.writeValueAsString(acc)) ;
-			if(DateUtils.isSameDay(new Date(), acc.getDuedate())){
-				 log.info("Payment Required");
-		}
-			
+			log.info("Date : = " + acc.getDuedate());
+			log.info("Account Details:" +  ow.writeValueAsString(acc)) ;	
 		return acc;
 		}
        

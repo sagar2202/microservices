@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
  * @author Sagar Jain
  *
  */
-@ResponseStatus(HttpStatus.BAD_REQUEST)
+@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
 public class PaymentFailureException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;

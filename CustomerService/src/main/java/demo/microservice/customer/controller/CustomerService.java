@@ -25,13 +25,15 @@ public class CustomerService {
 	@Autowired
 	private CustomerRepo custRepo;
 	
+	ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+
+	
 	@RequestMapping("/customer/{customerid}")
 	@ResponseBody
     public Customer getCustomer(@PathVariable int customerid) throws JsonProcessingException {
-		ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 		Customer cust = custRepo.findByCustomerid(customerid);	
 		if(cust==null){
-		log.error("Customer Not Found : " +  customerid);
+			log.error("Customer Not Found : " +  customerid) ;
 			throw new CustomerNotFoundException(customerid);			
 		}else{
 			log.info("Customer:" +  ow.writeValueAsString(cust)) ;

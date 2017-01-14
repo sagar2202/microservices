@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>demo.microservices.registry</groupId>
-	<artifactId>Eureka-Service-Registry</artifactId>
+	<groupId>demo.microservice.composite.customer</groupId>
+	<artifactId>CompositeCustomerService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Eureka-Service-Registry</name>
-	<description>Demo project for Eureka </description>
+	<name>CompositeCustomerService</name>
+	<description>Demo project for Spring Boot Composite App</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -27,13 +27,28 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>demo.microservice.customer</groupId>
+			<artifactId>CustomerService</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>demo.microservice.account</groupId>
+			<artifactId>AccountService</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>demo.microservice.payment</groupId>
+			<artifactId>PaymentService</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

@@ -27,6 +27,7 @@ import demo.microservice.payment.repo.PaymentRepo;
 @RestController
 public class PaymentService {
 	private static final Logger log = LogManager.getLogger(PaymentService.class);
+	ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 
 	@Autowired
 	private PaymentRepo paymentRepo;
@@ -35,7 +36,6 @@ public class PaymentService {
 	@ResponseBody
 	public Payment postPayment(@RequestParam("customerid") int customerid, @RequestParam("amount") float amount) throws JsonProcessingException {
 
-		ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 
 		try {
 			Payment payment = processPayment(customerid, amount);
@@ -68,9 +68,10 @@ public class PaymentService {
 
 	/**
 	 * @param customerid
+	 * @throws Exception 
 	 * 
 	 */
-	private Payment processPayment(int customerid, float amount) {
+	private Payment processPayment(int customerid, float amount) throws Exception {
 		/*
 		 * TBD Logic for some external service which process credit card payment. For now we
 		 * will assume payment is processed. Lets update the status in Payment
@@ -80,8 +81,10 @@ public class PaymentService {
 
 		int paymentid = new Random().nextInt(Integer.SIZE - 1);
 		
-	    return new Payment(customerid, paymentid, "SUCCESS", amount, new Date(System.currentTimeMillis()));
-
+		if(paymentid/2==0)
+	      return new Payment(customerid, paymentid, "SUCCESS", amount, new Date(System.currentTimeMillis()));
+		else 
+		  throw  new Exception();
 	}
 
 }

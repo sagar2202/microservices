@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>demo.microservice.customer</groupId>
-	<artifactId>CustomerDetail</artifactId>
+	<artifactId>CustomerService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>CustomerDetail</name>
+	<name>CustomerService</name>
 	<description>Demo project for Spring Boot CustomerDetail App</description>
 
 	<parent>

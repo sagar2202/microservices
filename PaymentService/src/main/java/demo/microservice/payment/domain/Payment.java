@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * @author Sagar Jain
  *
@@ -17,6 +19,7 @@ public class Payment {
 	private int customerid;	
 	private String status;
 	private double amount;
+	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss")
 	private Date paymentdate;
 	
 	public int getCustomerid() {
