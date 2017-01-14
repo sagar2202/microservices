@@ -1,6 +1,3 @@
-/**
- * 
- */
 package demo.microservice.composite.customer.controller;
 
 import java.io.IOException;
