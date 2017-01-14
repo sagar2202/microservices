@@ -1,6 +1,3 @@
-/**
- * 
- */
 package demo.microservice.composite.customer.domain;
 
 import java.util.Date;
@@ -38,11 +35,7 @@ public class Aggregated {
 	private int paymentid;
 	private String status;
 	private double amount;
-<<<<<<< HEAD
 	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", timezone="PST")
-=======
-	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", timezone="PST");
->>>>>>> origin/master
 	private Date paymentdate;
 
 	
