@@ -1,0 +1,389 @@
+{
+	"id": "8d3a1f94-4c6f-cda0-f19f-7c468fe1fb86",
+	"name": "Demo",
+	"description": "",
+	"order": [
+		"152daefa-c3a6-9be9-86a1-77fabb8e4b74",
+		"75ba8696-2190-49da-10ec-fff8a71bc05e",
+		"52f773e0-0220-a572-3787-f18019cacd9c",
+		"1c7b07ce-6402-f696-ee70-870e24ca4a31",
+		"2c05c5ec-d240-24d3-e8aa-8ab3c69728a1"
+	],
+	"folders": [],
+	"timestamp": 1484472105713,
+	"owner": "1339078",
+	"public": false,
+	"requests": [
+		{
+			"id": "152daefa-c3a6-9be9-86a1-77fabb8e4b74",
+			"headers": "",
+			"url": "http://localhost:7000/customer/9368",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "8d3a1f94-4c6f-cda0-f19f-7c468fe1fb86",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:7000/customer/9368",
+			"description": "Composite Partial Success",
+			"descriptionFormat": "html",
+			"time": 1484472642592,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 83,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sun, 15 Jan 2017 09:30:16 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"customerServiceStatus\":200,\"customerid\":9368,\"firstname\":\"Evelyn\",\"lastname\":\"Spencer\",\"address\":\"9414 Anzinger Park\",\"acccountServiceStatus\":200,\"datalimit\":5.0,\"availabledata\":2.5,\"balance\":110.0,\"duedate\":\"2017-01-15 03:15:45\",\"paymentServiceStatus\":500}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "e3e639f9-d6fe-da77-9c7e-6f20dcc0f68f",
+					"name": "Composite Partial Success",
+					"request": {
+						"url": "http://localhost:7000/customer/9368",
+						"headers": [],
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "1c7b07ce-6402-f696-ee70-870e24ca4a31",
+			"headers": "",
+			"url": "http://localhost:7004/payment?customerid=9368&amount=100.00",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "8d3a1f94-4c6f-cda0-f19f-7c468fe1fb86",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:7000/customer/9368",
+			"description": "Payment Success",
+			"descriptionFormat": "html",
+			"time": 1484472724889,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 231,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sun, 15 Jan 2017 09:31:57 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"paymentid\":702760530,\"customerid\":9368,\"status\":\"SUCCESS\",\"amount\":100.0,\"paymentdate\":\"2017-01-15 01:31:56\"}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "3ceb376c-91e7-a9b9-898a-5e96c0c3154c",
+					"name": "Payment Success",
+					"request": {
+						"url": "http://localhost:7004/payment?customerid=9368&amount=100.00",
+						"headers": [],
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "2c05c5ec-d240-24d3-e8aa-8ab3c69728a1",
+			"headers": "",
+			"url": "http://localhost:7004/payment?customerid=9368&amount=100.00",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "8d3a1f94-4c6f-cda0-f19f-7c468fe1fb86",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:7000/customer/9368",
+			"description": "Payment Failure",
+			"descriptionFormat": "html",
+			"time": 1484472747812,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 500,
+						"name": "Internal Server Error",
+						"detail": "A generic error message, given when no more specific message is suitable."
+					},
+					"time": 22,
+					"headers": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sun, 15 Jan 2017 09:32:15 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"timestamp\":1484472735325,\"status\":500,\"error\":\"Internal Server Error\",\"exception\":\"demo.microservice.payment.exception.PaymentFailureException\",\"message\":\"Failed to Process Payment for: 9368\",\"path\":\"/payment\"}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "1e63cecf-cd92-bcb5-e2de-7159ff2f0e30",
+					"name": "Payment Failure",
+					"request": {
+						"url": "http://localhost:7004/payment?customerid=9368&amount=100.00",
+						"headers": [],
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "52f773e0-0220-a572-3787-f18019cacd9c",
+			"headers": "",
+			"url": "http://localhost:7003/account/9368",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "8d3a1f94-4c6f-cda0-f19f-7c468fe1fb86",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:7000/customer/9368",
+			"description": "Account Success",
+			"descriptionFormat": "html",
+			"time": 1484472702426,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 19,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sun, 15 Jan 2017 09:31:29 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"customerid\":9368,\"datalimit\":5.0,\"availabledata\":2.5,\"balance\":110.0,\"duedate\":\"2017-01-15 11:15:45\"}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "725498bb-516a-39d0-43ec-b63fabe9477a",
+					"name": "Account Success",
+					"request": {
+						"url": "http://localhost:7003/account/9368",
+						"headers": [],
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "75ba8696-2190-49da-10ec-fff8a71bc05e",
+			"headers": "",
+			"url": "http://localhost:7000/customer/9368",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "8d3a1f94-4c6f-cda0-f19f-7c468fe1fb86",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:7000/customer/9368",
+			"description": "Composite Full Success",
+			"descriptionFormat": "html",
+			"time": 1484472673055,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 237,
+					"headers": [
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sun, 15 Jan 2017 09:31:00 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"customerServiceStatus\":200,\"customerid\":9368,\"firstname\":\"Evelyn\",\"lastname\":\"Spencer\",\"address\":\"9414 Anzinger Park\",\"acccountServiceStatus\":200,\"datalimit\":5.0,\"availabledata\":2.5,\"balance\":110.0,\"duedate\":\"2017-01-15 03:15:45\",\"paymentServiceStatus\":200,\"paymentid\":1100093008,\"status\":\"SUCCESS\",\"amount\":110.0,\"paymentdate\":\"2017-01-15 01:30:59\"}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "b1d23d36-87c1-5a00-ca23-a1ad16f93e88",
+					"name": "Composite Full Success",
+					"request": {
+						"url": "http://localhost:7000/customer/9368",
+						"headers": [],
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
