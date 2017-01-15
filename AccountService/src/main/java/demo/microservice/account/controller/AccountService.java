@@ -29,7 +29,6 @@ public class AccountService {
 	@RequestMapping("/account/{customerid}")
 	@ResponseBody
     public Account getCustomer(@PathVariable int customerid) throws JsonProcessingException {
-		//DateFormat df = new 
 		
 		ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 		Account acc = accRepo.findByCustomerid(customerid);	
