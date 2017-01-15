@@ -37,7 +37,6 @@ public class AccountService {
 			log.error("Account Not Found for: " +  customerid);
 			throw new AccountDetailsNotFoundException(customerid);			
 		}else{
-			log.info("Date : = " + acc.getDuedate());
 			log.info("Account Details:" +  ow.writeValueAsString(acc)) ;	
 		return acc;
 		}
