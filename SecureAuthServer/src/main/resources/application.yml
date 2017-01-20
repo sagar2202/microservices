@@ -1,0 +1,31 @@
+spring:
+  application:
+     name: secured-auth-server 
+
+server:
+  port: 9999
+  context-path: /services
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+ 
+
+security:
+  oauth2:
+    client:
+      client-id: demo
+      clientSecret: demosecret
+      authorized-grant-types: authorization_code,refresh_token,password,client_credentials
+      scope:  account, customer, payment
+ 
+#  user:
+#    name: user
+#    password: password
+#    role : USER
+
+
+
+
+

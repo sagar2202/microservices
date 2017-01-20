@@ -1,0 +1,19 @@
+spring:
+  application:
+     name: secured-service
+server: 
+  port: 8000
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:9999/services/user
+      
+logging:
+  level:
+    demo.microservice.secured.controller: DEBUG
