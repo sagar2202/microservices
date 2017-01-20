@@ -7,13 +7,138 @@
 		"75ba8696-2190-49da-10ec-fff8a71bc05e",
 		"52f773e0-0220-a572-3787-f18019cacd9c",
 		"1c7b07ce-6402-f696-ee70-870e24ca4a31",
-		"2c05c5ec-d240-24d3-e8aa-8ab3c69728a1"
+		"2c05c5ec-d240-24d3-e8aa-8ab3c69728a1",
+		"5548b621-357d-fd25-0e57-ecd261f3dca7",
+		"0dba6ec4-0d1f-c5c5-1403-abe7ca993d0e"
 	],
 	"folders": [],
 	"timestamp": 1484472105713,
 	"owner": "1339078",
 	"public": false,
 	"requests": [
+		{
+			"id": "0dba6ec4-0d1f-c5c5-1403-abe7ca993d0e",
+			"headers": "Authorization: Bearer 0d7286a6-30cd-4cf8-9ac4-a109f286e324\n",
+			"url": "http://localhost:8000/customer/9368",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "8d3a1f94-4c6f-cda0-f19f-7c468fe1fb86",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8000/customer/9368",
+			"description": "Secure API Call",
+			"descriptionFormat": "html",
+			"time": 1484878926602,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 5173,
+					"headers": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "232",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 20 Jan 2017 02:21:50 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Expires",
+							"key": "Expires",
+							"value": "0",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"name": "Pragma",
+							"key": "Pragma",
+							"value": "no-cache",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"name": "X-Application-Context",
+							"key": "X-Application-Context",
+							"value": "secured-service:8000",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "DENY",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"customerServiceStatus\":200,\"customerid\":9368,\"firstname\":\"Evelyn\",\"lastname\":\"Spencer\",\"address\":\"9414 Anzinger Park\",\"acccountServiceStatus\":200,\"datalimit\":5.0,\"availabledata\":2.5,\"balance\":110.0,\"duedate\":\"2017-01-15 03:15:45\"}",
+					"language": "plainText",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "cc7a3ef9-aa58-e608-9c79-4b484986c3cd",
+					"name": "Secure API Response",
+					"request": {
+						"url": "http://localhost:8000/customer/9368",
+						"headers": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 0d7286a6-30cd-4cf8-9ac4-a109f286e324",
+								"type": "text",
+								"enabled": true,
+								"warning": ""
+							}
+						],
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
 		{
 			"id": "152daefa-c3a6-9be9-86a1-77fabb8e4b74",
 			"headers": "",
@@ -311,6 +436,184 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {}
+		},
+		{
+			"id": "5548b621-357d-fd25-0e57-ecd261f3dca7",
+			"headers": "Authorization: Basic ZGVtbzpkZW1vc2VjcmV0\n",
+			"url": "http://localhost:9999/services/oauth/token",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "8d3a1f94-4c6f-cda0-f19f-7c468fe1fb86",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_id",
+					"value": "demo",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "user",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://localhost:9999/services/oauth/token",
+			"description": "Auth Service to get Token",
+			"descriptionFormat": "html",
+			"time": 1484878270565,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 348,
+					"headers": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "no-store",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 20 Jan 2017 02:10:41 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Pragma",
+							"key": "Pragma",
+							"value": "no-cache",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Application-Context",
+							"key": "X-Application-Context",
+							"value": "secured-auth-server:9999",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "DENY",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"access_token\":\"0d7286a6-30cd-4cf8-9ac4-a109f286e324\",\"token_type\":\"bearer\",\"refresh_token\":\"96afea13-42a7-4beb-93f7-d0d4907ea40b\",\"expires_in\":43199,\"scope\":\"account customer payment\"}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "d6ddb3e0-b1bd-0e31-1763-3fefd0511bd7",
+					"name": "Token Response",
+					"request": {
+						"url": "http://localhost:9999/services/oauth/token",
+						"headers": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"enabled": true,
+								"warning": ""
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"name": "Authorization",
+								"value": "Basic ZGVtbzpkZW1vc2VjcmV0"
+							}
+						],
+						"data": [
+							{
+								"key": "grant_type",
+								"value": "password",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "client_id",
+								"value": "demo",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "username",
+								"value": "user",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "password",
+								"value": "password",
+								"type": "text",
+								"enabled": true
+							}
+						],
+						"method": "POST",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "basicAuth",
+			"helperAttributes": {
+				"id": "basic",
+				"username": "demo",
+				"password": "demosecret",
+				"saveToRequest": true
+			}
 		},
 		{
 			"id": "75ba8696-2190-49da-10ec-fff8a71bc05e",
