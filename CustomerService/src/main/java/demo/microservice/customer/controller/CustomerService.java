@@ -34,11 +34,11 @@ public class CustomerService {
 		Customer cust = custRepo.findByCustomerid(customerid);	
 		if(cust==null){
 			log.error("Customer Not Found : " +  customerid) ;
-			throw new CustomerNotFoundException(customerid);			
+			//throw new CustomerNotFoundException(customerid);			
 		}else{
 			log.info("Customer:" +  ow.writeValueAsString(cust)) ;
-		return cust;
+		
 		}
-       
+		return cust;
 	}
 }

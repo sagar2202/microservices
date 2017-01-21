@@ -17,6 +17,8 @@ eureka:
 server:
   port: 7000
   
+  
 logging:
   level:
-    demo.microservice.composite.customer.controller: DEBUG
+     demo.microservice.composite.customer.controller: DEBUG
+      

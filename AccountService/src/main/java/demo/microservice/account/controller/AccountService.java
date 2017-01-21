@@ -12,7 +12,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
 import demo.microservice.account.domain.Account;
-import demo.microservice.account.exception.AccountDetailsNotFoundException;
 import demo.microservice.account.repo.AccountRepo;
 
 /**
@@ -29,16 +28,12 @@ public class AccountService {
 	@RequestMapping("/account/{customerid}")
 	@ResponseBody
     public Account getCustomer(@PathVariable int customerid) throws JsonProcessingException {
+		//DateFormat df = new 
 		
 		ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 		Account acc = accRepo.findByCustomerid(customerid);	
-		if(acc==null){
-			log.error("Account Not Found for: " +  customerid);
-			throw new AccountDetailsNotFoundException(customerid);			
-		}else{
-			log.info("Account Details:" +  ow.writeValueAsString(acc)) ;	
+		log.info("Account Details:" +  ow.writeValueAsString(acc));
 		return acc;
-		}
        
 	}
 }

@@ -164,8 +164,8 @@ public class Aggregated {
 	public Aggregated(ResponseEntity<Customer> customerResult, ResponseEntity<Account> accountResult,
 			ResponseEntity<Payment> paymentResult) {
 
-		if (customerResult.getStatusCodeValue() == HttpStatus.NOT_FOUND.value() ) {
-			this.customerServiceStatus = HttpStatus.NOT_FOUND.value();
+		if (customerResult.getStatusCodeValue() != HttpStatus.OK.value() ) {
+			this.customerServiceStatus = customerResult.getStatusCodeValue();
 		} else {
 			this.customerid = customerResult.getBody().getCustomerId();
 			this.firstname = customerResult.getBody().getfirstname();
@@ -175,7 +175,9 @@ public class Aggregated {
 		}
 
 		
-		if(accountResult !=null ) {
+		if(accountResult!=null && accountResult.getStatusCodeValue() != HttpStatus.OK.value()) {
+			this.acccountServiceStatus = accountResult.getStatusCodeValue();
+		} else if (accountResult!=null){
 			this.datalimit = accountResult.getBody().getDatalimit();
 			this.availabledata = accountResult.getBody().getAvailabledata();
 			this.balance = accountResult.getBody().getBalance();
